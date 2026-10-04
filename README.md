@@ -98,4 +98,4 @@ public_html/            ← https://.../students/yourname/
     Did you hit one? Which one, and how did you fix it?
 20. Push this repo (your code **and** this README with your answers) to **your own GitHub repo**.
 21. Submit in Moodle three links: (1) your GitHub repo, (2) your landing page, and (3) your live drum kit.
-    Labs are submitted in Moodle every week. That is how I receive your work.
+   
