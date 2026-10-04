@@ -51,17 +51,44 @@ You'll submit links to both in Moodle (see the last step).
 10. Comment your code in an educational way: not for the public, but to write down how everything works. I will be looking for this!
 11. Optional: make the button visibly react when played (hint: there's a `.pressed` class in the CSS, plus `classList` and `setTimeout`).
 
+## Organize your site: a landing page for all your labs
+
+From now on, your site at `.../students/yourname/` is your **landing page**: the home base that
+links to every lab you do this term. Set it up like this in your web folder:
+
+```
+public_html/            ← https://.../students/yourname/
+├── index.html          ← your landing page (home)
+├── lab1/               ← your Lab 1 form pages (form.html, submit.php, ...)
+└── lab2/               ← this drum kit
+```
+
+12. Make (or clean up) your landing page `index.html`: your name, a short intro, and a link to each lab.
+    Give each lab a line or two saying what it is. Make it look like *yours*.
+13. Move your Lab 1 files into a `lab1/` folder. After moving them, **re-test your form**: does it still submit
+    and show the results? Why does a form whose `action` is `submit.php` (a relative path) keep working when the
+    whole folder moves together?
+14. Every lab page needs a way back home. Add a link from the drum kit (and your Lab 1 pages) to your landing page:
+    ```html
+    <a href="../">← Home</a>
+    ```
+    `../` means "up one folder." Why would `href="/"` send you to the wrong place on our server?
+    (Hint: rule 1 at the top.)
+15. Links from your landing page go *down* into the folders: `href="lab1/"` and `href="lab2/"`.
+
 ## Deploy it
 
-12. Test everything locally first.
-13. However you have your SFTP set up, upload your lab folder to your web folder as `lab2/`.
+16. Test everything locally first, including every link, both ways.
+17. However you have your SFTP set up, upload: your landing page `index.html`, the `lab1/` folder, and this lab as `lab2/`.
     You don't need to upload the hidden `.git` folder (the server won't serve it anyway).
-14. Link `lab2/` from your site's `index.html`, and link back to your home page from the drum kit.
-15. Open your live drum kit at `https://lampforall.cis251296.projects.jetstream-cloud.org/students/yourname/lab2/`
-    and make sure **every** image, sound and link works there, not just locally.
-16. **Works locally but broken on the server?** Open DevTools (right-click → Inspect) → **Console** and **Network** tabs,
+    Remove the old Lab 1 files from the top of your web folder once `lab1/` works, so you don't have two copies.
+18. Open your live site at `https://lampforall.cis251296.projects.jetstream-cloud.org/students/yourname/` and click
+    through **everything**: home → Lab 1 → home → Lab 2 → home. Every image, sound and link should work there,
+    not just locally.
+19. **Works locally but broken on the server?** Open DevTools (right-click → Inspect) → **Console** and **Network** tabs,
     and look for red **404** errors. Almost every time it's one of the two rules at the top:
     a leading `/` in a path, or a filename whose case or spelling doesn't match.
     Did you hit one? Which one, and how did you fix it?
-17. Push this repo (your code **and** this README with your answers) to **your own GitHub repo**.
-18. Submit in Moodle two links: (1) your GitHub repo, and (2) your live drum kit. Labs are submitted in Moodle every week. That is how I receive your work.
+20. Push this repo (your code **and** this README with your answers) to **your own GitHub repo**.
+21. Submit in Moodle three links: (1) your GitHub repo, (2) your landing page, and (3) your live drum kit.
+    Labs are submitted in Moodle every week. That is how I receive your work.
