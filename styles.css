@@ -16,6 +16,10 @@ footer {
   font-family: sans-serif;
 }
 
+footer a {
+  color: #DBEDF3;           /* so your "Home" link shows up on the dark background */
+}
+
 .w {
 
 }
@@ -69,4 +73,5 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+  background-size: cover;   /* makes your background image fill the button */
 }
