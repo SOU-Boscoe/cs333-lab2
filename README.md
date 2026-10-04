@@ -3,13 +3,14 @@ JS event handlers + functions + loops: build a drum kit 🥁
 
 Do each step below, and **answer the questions right here in this `README.md` file** as you go (type your answers under each question).
 
-**How this lab works (two things to hand in):**
+**How this lab works (three links to hand in):**
 - **Your code:** make your own copy of this lab (click **Use this template**, or clone it),
   do your work, and **push it to your own GitHub repo** so I can see your code.
+- **Your landing page:** your site's home page on `lampforall`, linking to all your labs.
 - **Your live drum kit:** **SFTP your lab folder to your web folder on `lampforall`** so it
   runs at `.../students/yourname/lab2/`.
 
-You'll submit links to both in Moodle (see the last step).
+You'll submit all three links in Moodle (see the last step).
 
 > ⚠️ **Two rules that keep "it works on my laptop" working on the server too:**
 > 1. **Relative paths only.** Write `sounds/snare.mp3`, never `/sounds/snare.mp3`. A leading `/`
