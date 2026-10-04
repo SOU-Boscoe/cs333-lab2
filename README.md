@@ -25,9 +25,15 @@ You'll submit links to both in Moodle (see the last step).
    (Hint: what happens if your script looks for the buttons before they exist?)
 2. Add an event listener to **each** drum button. Use a **loop**, not seven copies of the same code.
    (Hint: `document.querySelectorAll(".drum")`)
-3. Inside your listener, `console.log` which button was clicked. Try `this.innerHTML`.
-   Then try writing the listener as an **arrow function**. What happens to `this`, and why?
-   (Look back at the `this` slides.)
+3. Inside your listener, `console.log` which button was clicked. Your listener function receives an
+   **event object**. Give it a parameter and look inside it:
+   ```js
+   button.addEventListener("click", function (event) {
+     console.log(event.target.innerHTML);   // the letter on the button you clicked
+   });
+   ```
+   What is `event.target`? (Try `console.log(event)` and poke around.) You'll use the same event
+   object again in Part 2 for the keyboard.
 4. Add a drum sound to the listener. Start with **one** sound for every button:
    ```js
    let sound = new Audio("sounds/tom-1.mp3");   // relative path!
